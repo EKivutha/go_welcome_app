@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/static/stylesheets/welcome-template.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- The welcome struct (shown in the main.go code)
+             is received within the HTML and we just need to use the . operator
+              and retrieve the information we want -->
+    <title>Welcome {{.Name}}</title>
+
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href = "#news" >News</a>
+        <a href = "#news" >Contact</a>
+        <a href = "#news" >About</a>
+        <a href = "#news" >Services</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+    </div>
+    <div class="welcome center">Welcome {{.Name}} , it is {{.Time}}</div>
+  </body>
+</html>
