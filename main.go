@@ -21,7 +21,7 @@ func main() {
 	templates := template.Must(template.ParseFiles("template/welcome-template.html"))
 
 	//link our css styling to the html page
-	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("."+"/static/"))))
 
 	//initialize out url handler
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {

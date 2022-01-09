@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="/static/stylesheets/welcome-template.css" />
+    <link href="/dist/output.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -12,19 +13,25 @@
              is received within the HTML and we just need to use the . operator
               and retrieve the information we want -->
     <title>Welcome {{.Name}}</title>
-
   </head>
   <body>
     <div class="topnav" id="myTopnav">
-        <a href="#home" class="active">Home</a>
-        <a href = "#news" >News</a>
-        <a href = "#news" >Contact</a>
-        <a href = "#news" >About</a>
-        <a href = "#news" >Services</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
+      <a href="#home" class="active">Home</a>
+      <a href="#news">News</a>
+      <a href="#news">Contact</a>
+      <a href="#news">About</a>
+      <a href="#news">Services</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
-    <div class="welcome center">Welcome {{.Name}} , it is {{.Time}}</div>
+    <h1 class="text-3xl text-white font-bold underline bg-blue">Hello world!</h1>
+    <section class="container mx-auto px-4 py-12 max-w-5xl bg-blue">
+      <div
+        class="underline underline-offset-1 text-white text-lg font-semibold mt-2"
+      >
+        Welcome {{.Name}} , it is {{.Time}}
+      </div>
+    </section>
   </body>
 </html>
